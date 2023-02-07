@@ -2,6 +2,32 @@
 
 @import url(../vendor/fonts/fonts.css);
 
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/mane/mane.css);
+
+@import url(../blocks/element/__description/element__description.css);
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__like/element__like.css);
+@import url(../blocks/element/element.css);
+
+@import url(../blocks/elements/elements.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/header.css);
+
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__button-add/profile__button-add.css);
+@import url(../blocks/profile/__column/profile__column.css);
+@import url(../blocks/profile/__edit-button/profile__edit-button.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__prof/profile__prof.css);
+@import url(../blocks/profile/profile.css);
 
 
 
@@ -10,7 +36,54 @@
 
 
 
+/*.popup__span {
+  display: inline-block;
+  height: 12px;
+  color: transparent;
+  font-family: 'Inter', Verdana, Tahoma, sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 12px;
+  line-height: 15px;
+}
 
+.popup__span:nth-of-type(1n) {
+  margin-bottom: 13px;
+}
 
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  .popup__span {
+      min-width: 238px;
+      margin-top: 5px;
+      margin-left: 22px;
+  }
 
+  .popup__span:nth-of-type(2n) {
+      margin-bottom: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .popup__span {
+      min-width: 358px;
+      margin-top: 5px;
+      margin-left: 36px;
+  }
+
+  .popup__span:nth-of-type(2n) {
+      margin-bottom: 31px;
+  }
+}
+
+.popup__span_active {
+  color: red;
+}
+
+.popup__input_type_error {
+  border-bottom-color: red;
+}
+
+Блок целиком ХЗ разобраться что надо что нет
+
+*/
 

@@ -1,0 +1,6 @@
+.profile__info {
+  display: grid;
+  grid: auto / max-content auto auto auto;
+  gap: 20px;
+  row-gap: 0;
+}
