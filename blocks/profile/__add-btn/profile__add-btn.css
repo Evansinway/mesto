@@ -1,7 +1,9 @@
-.profile__button-add {
+.profile__add-btn {
+  background-image: url(../../../images/Add_Button.svg);
   width: 150px;
   height: 50px;
-  background-image: url(../../../images/Add_Button.svg);
+  justify-self: end;
+  align-self: center;
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +11,9 @@
   grid-column: 4/5;
   border: 2px solid #fff;
   border-radius: 2px;
-  justify-self: end;
-  align-self: center;
   cursor: pointer;
+}
+
+.profile__add-btn:hover {
+  opacity: .5;
 }

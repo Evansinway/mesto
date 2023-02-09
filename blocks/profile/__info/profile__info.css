@@ -1,6 +1,7 @@
 .profile__info {
   display: grid;
   grid: auto / max-content auto auto auto;
-  gap: 20px;
-  row-gap: 0;
+  padding-right: 160px; /* Расстояние между аватаркой Кусто и секции с именем проф и btn */
 }
+
+

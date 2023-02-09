@@ -1,16 +1,25 @@
 .element__like {
   position: absolute;
-    background-image: url(../../../images/Vector_like.svg);
-    width: 22px;
-    height: 19px;
-    border: none;
-    right: 20px;
-    bottom: 30px;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    transition: .7s ease;
-    cursor: pointer;
-    background-position: center;
+  background-image: url(../../../images/Vector_like.svg);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 19px;
+  right: 20px;
+  bottom: 30px;
+  margin: 0;
+  padding: 0;
+  transition: .7s ease;
+  background-position: center;
+  cursor: pointer;
+  border: none;
+}
+
+.element__like:hover {
+  opacity: .5;
+}
+
+.element__like:active {
+  background-image: url(../../../images/Heart_active_black.svg);
+  background-color: transparent;
 }

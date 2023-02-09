@@ -8,124 +8,91 @@
 </head>
 
 <body class="page">
-
   <header class="header">
     <img src="./images/logo.svg" class="header__logo" alt="Место">
   </header>
 
   <main>
-
-     <section class="profile">
+    <section class="profile">
       <div class="profile__info">
-
-        <img src="./images/0_JYKusto.jpg" class="profile__avatar" alt="аватар">
-
+        <img src="./images/0_JYKusto.jpg" class="profile__avatar" alt="Аватар">
         <div class="profile__column">
-            <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button type="button" class="profile__edit-button" aria-label="Изменить профиль"></button>
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__edit-btn" aria-label="Изменить профиль"></button>
         </div>
-
-          <p class="profile__prof">Исследователь океана</p>
-
+        <p class="profile__prof">Исследователь океана</p>
       </div>
-
-      <button type="button" class="profile__button-add"></button>
-
+      <button type="button" class="profile__add-btn" aria-label="Добавить место"></button>
     </section>
 
     <section class="elements">
       <div class="element">
-        <img class="element__image" src="./images/1_Almaty.jpg" alt="Almaty">
+        <img class="element__image" src="./images/1_Almaty.jpg" alt="Almaty" id="image">
         <div class="element__description">
           <h2 class="element__title">Алматы</h2>
           <button class="element__like" type="button" arial-label="Нравится" name="element__like" id="element__like"></button>
         </div>
       </div>
 
-
-
       <div class="element">
-        <img class="element__image" src="./images/2_Tbilissi.jpg" alt="Tbilissi">
+        <img class="element__image" src="./images/2_Tbilissi.jpg" alt="Tbilissi" id="image">
         <div class="element__description">
           <h2 class="element__title">Тбилиси</h2>
           <button class="element__like" type="button" arial-label="Нравится" name="element__like" id="element__like"></button>
         </div>
       </div>
 
-
-
       <div class="element">
-        <img class="element__image" src="./images/3_Dombay.jpg" alt="Dombay">
+        <img class="element__image" src="./images/3_Dombay.jpg" alt="Dombay" id="image">
         <div class="element__description">
           <h2 class="element__title">Домбай</h2>
           <button class="element__like" type="button" arial-label="Нравится" name="element__like" id="element__like"></button>
         </div>
       </div>
 
-
-
       <div class="element">
-        <img class="element__image" src="./images/4_Bishkek.jpg" alt="Bishkek">
+        <img class="element__image" src="./images/4_Bishkek.jpg" alt="Bishkek" id="image">
         <div class="element__description">
           <h2 class="element__title">Бишкек</h2>
           <button class="element__like" type="button" arial-label="Нравится" name="element__like" id="element__like"></button>
         </div>
       </div>
 
-
-
       <div class="element">
-        <img class="element__image" src="./images/5_Astana.jpg" alt="Astana">
+        <img class="element__image" src="./images/5_Astana.jpg" alt="Astana" id="image">
         <div class="element__description">
           <h2 class="element__title">Астана</h2>
           <button class="element__like" type="button" arial-label="Нравится" name="element__like" id="element__like"></button>
         </div>
       </div>
 
-
-
       <div class="element">
-        <img class="element__image" src="./images/6_Tashkent.jpg" alt="Tashkent">
+        <img class="element__image" src="./images/6_Tashkent.jpg" alt="Tashkent" id="image">
         <div class="element__description">
           <h2 class="element__title">Ташкент</h2>
           <button class="element__like" type="button" arial-label="Нравится" name="element__like" id="element__like"></button>
         </div>
       </div>
     </section>
-
-
   </main>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
-
     </footer>
 
-
-
-   <!--  ПОКА ЗАКОММЕНТ
-    <div class="popup popup_profile">
+    <div class="popup popup_opened">
       <div class="popup__container">
-        <button type="button" class="popup__close"></button>
-        <form class="popup__form popup__profile-form" name="form" novalidate>
-          <fieldset class="popup__input-container">
-            <h2 class="popup__heading">Редактировать профиль</h2>
-            <input type="text" class="popup__item popup__item_name_input" name="input-name" placeholder="Имя" minlength="2" maxlength="40" id="popup__name-input" required>
-            <span class="popup__span popup__name-input-error"></span>
-            <input type="text" class="popup__item popup__item_job_input" name="input-job" placeholder="О себе" minlength="2" maxlength="200" id="popup__job-input" required>
-            <span class="popup__span popup__job-input-error"></span>
-          </fieldset>
-          <button type="submit" class="popup__input-error popup__button">Сохранить</button>
-        </form>
+        <button class="popup__close-btn" type="button" aria-label="Закрыть редактирование"></button>
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <form class="popup__form" name="formPopup">
+            <input type="text" class="popup__input popup__input_type_name" name="name" placeholder="Жак-Ив Кусто">
+            <input type="text" class="popup__input popup__input_type_about" name="job" placeholder="Исследователь океана">
+            <button type="submit" class="popup__btn" >Сохранить</button>
+          </form>
       </div>
-    </div>
-    -->
+  </div>
 
-    <!-- ПОКА ЗАКОММЕНТ
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validate.js"></script>
-  -->
-
+  <script src="./scripts/index.js"></script>
 
 </body>
 </html>

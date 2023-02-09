@@ -21,69 +21,26 @@
 @import url(../blocks/header/header.css);
 
 @import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__button-add/profile__button-add.css);
-@import url(../blocks/profile/__column/profile__column.css);
-@import url(../blocks/profile/__edit-button/profile__edit-button.css);
+@import url(../blocks/profile/__add-btn/profile__add-btn.css);
+@import url(../blocks/profile/__edit-btn/profile__edit-btn.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__prof/profile__prof.css);
+@import url(../blocks/profile/__column/profile__column.css);
 @import url(../blocks/profile/profile.css);
 
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__container/popup__container\ .css);
+@import url(../blocks/popup/__close-btn/popup__close-btn\ .css);
+@import url(../blocks/popup/__title/popup__title\ .css);
+@import url(../blocks/popup/__form/popup__form\ .css);
+@import url(../blocks/popup/__input/popup__input\ .css);
+@import url(../blocks/popup/__btn/popup__btn\ .css);
+@import url(../blocks/popup/_opened/popup_opened\ .css);
 
 
 
 
 
 
-
-/*.popup__span {
-  display: inline-block;
-  height: 12px;
-  color: transparent;
-  font-family: 'Inter', Verdana, Tahoma, sans-serif;
-  font-weight: 400;
-  font-style: regular;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.popup__span:nth-of-type(1n) {
-  margin-bottom: 13px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 1023px) {
-  .popup__span {
-      min-width: 238px;
-      margin-top: 5px;
-      margin-left: 22px;
-  }
-
-  .popup__span:nth-of-type(2n) {
-      margin-bottom: 28px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .popup__span {
-      min-width: 358px;
-      margin-top: 5px;
-      margin-left: 36px;
-  }
-
-  .popup__span:nth-of-type(2n) {
-      margin-bottom: 31px;
-  }
-}
-
-.popup__span_active {
-  color: red;
-}
-
-.popup__input_type_error {
-  border-bottom-color: red;
-}
-
-Блок целиком ХЗ разобраться что надо что нет
-
-*/
 
