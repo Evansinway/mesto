@@ -8,7 +8,7 @@
 В работе используются:
 Методология БЭМ, DOM, HTML, CSS, Flexbox, Adaptive, Grid Layout,
 
-Ссылка на страницу:
+Ссылка на страницу: https://evansinway.github.io/mesto/
 
 
 
