@@ -13,4 +13,10 @@
   padding-left: 10px;
 }
 
-
+@media screen and (max-width: 680px) {
+ .profile__prof {
+  text-align: center;
+   font-size: 14px;
+   line-height: 17px;
+ }
+}

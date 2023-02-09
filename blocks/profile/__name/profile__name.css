@@ -8,10 +8,22 @@
   font-size: 42px;
   line-height: 48px;
   padding-top: 10px;
-  padding-left: 3px;
+  padding-left: 10px;
   grid-column: 2/3;
   grid-row: 1/2;
 }
 
+@media screen and (max-width: 320px) {
+  .profile__name {
+    line-height: 1.2;
+    padding-left: 22px;
+    padding-top: 200px;
+  }
+}
 
+@media screen and (max-width: 370px) {
+  .profile__name {
+    font-size: 27px;
+  }
+}
 

@@ -9,14 +9,14 @@ const aboutInput = document.querySelector('.popup__input_type_about');
 
 
 function openPopup() {
-  popup.classList.add('popup_opened')
+  popup.classList.add('popup_opened')  //открытие
   nameInput.value = profileName.textContent;
   aboutInput.value = profileAbout.textContent;
 }
 
 
 function closePopup() {
-  popup.classList.remove('popup_opened')
+  popup.classList.remove('popup_opened')  //закрытие
 }
 
 editButton.addEventListener('click', openPopup);
@@ -30,4 +30,4 @@ function submitForm(event) {
   closePopup();
 }
 
-popupForm.addEventListener('submit', submitForm);
+popupForm.addEventListener('submit', submitForm); //сабмит
