@@ -9,7 +9,7 @@ const aboutInput = document.querySelector('.popup__input_type_about');
 
 
 function openPopup() {
-  popup.classList.add('popup__opened')
+  popup.classList.add('popup_opened')
   nameInput.value = profileName.textContent;
   aboutInput.value = profileAbout.textContent;
 }
@@ -19,12 +19,9 @@ function closePopup() {
   popup.classList.remove('popup_opened')
 }
 
-
 editButton.addEventListener('click', openPopup);
 
-
 popupCloseButton.addEventListener('click', closePopup);
-
 
 function submitForm(event) {
   event.preventDefault();
@@ -32,6 +29,5 @@ function submitForm(event) {
   profileAbout.textContent = aboutInput.value;
   closePopup();
 }
-
 
 popupForm.addEventListener('submit', submitForm);
