@@ -11,6 +11,7 @@
   grid-column: 2/3;
   grid-row: 2;
   padding-left: 10px;
+  width:100%;
 }
 
 @media screen and (max-width: 680px) {

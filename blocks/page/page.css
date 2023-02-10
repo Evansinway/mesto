@@ -9,3 +9,9 @@
   padding-top: 45px;
   font-family: 'Inter', arial, sans-serif;
 }
+
+@media screen and (max-width: 618px) {
+  .page {
+    padding-top: 28px;
+ }
+ }

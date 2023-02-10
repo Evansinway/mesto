@@ -4,8 +4,6 @@
 
 @import url(../blocks/page/page.css);
 
-@import url(../blocks/mane/mane.css);
-
 @import url(../blocks/element/__description/element__description.css);
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__title/element__title.css);

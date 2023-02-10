@@ -1,6 +1,6 @@
 .profile {
   display: grid;
-  padding: 40px 0 0;
+ /* padding: 40px 0 0;*/
   color: #fff;
 }
 
@@ -17,12 +17,13 @@
 
 @media screen and (max-width: 580px) {
   .profile {
-    /*position: absolute;  /* чтобы кнопку плюса убрать из этого блока*/
+    /*position: absolute; */
     padding-top: 30px;
-    padding-bottom: calc(36px + (51 - 36) * (100vw - 320px) / (1280 - 320));
+    /*padding-bottom: calc(36px + (51 - 36) * (100vw - 320px) / (1280 - 320));*/
     padding-left: 19px;
     padding-right: 19px;
     gap: 0;
+    margin-bottom: 0;
   }
 }
 

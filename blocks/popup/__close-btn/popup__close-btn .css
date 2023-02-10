@@ -11,6 +11,7 @@
   transition: opacity .5s ease;
   background-color: black;
   border: none;
+  cursor: pointer;
 }
 
 .popup__close-btn:hover {

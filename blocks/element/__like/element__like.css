@@ -1,19 +1,18 @@
 .element__like {
-  position: absolute;
   background-image: url(../../../images/Vector_like.svg);
-  background-color: #fff;
-  background-repeat: no-repeat;
-  width: 22px;
-  height: 19px;
-  right: 20px;
-  bottom: 30px;
   margin: 0;
   padding: 0;
-  transition: .7s ease;
-  background-position: center;
+  display: block;
   cursor: pointer;
+  width: auto;
   border: none;
+  background-color: transparent;
+  padding-right: 65px;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 .element__like:hover {
   opacity: .5;
