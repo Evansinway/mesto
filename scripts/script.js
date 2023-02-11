@@ -5,7 +5,7 @@ const popupForm = document.querySelector('.popup__form');
 const profileName = document.querySelector('.profile__name');
 const nameInput = document.querySelector('.popup__input_type_name');
 const profileProf = document.querySelector('.profile__prof');
-const aboutInput = document.querySelector('.popup__input_type_about');
+const profInput = document.querySelector('.popup__input_type_prof');
 
 
 function openPopup() {
