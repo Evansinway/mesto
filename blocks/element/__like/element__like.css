@@ -11,13 +11,15 @@
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
+  transition: .7s ease;
 }
 
 .element__like:hover {
   opacity: .5;
+  cursor: pointer;
 }
 
-.element__like:active {
+/*.element__like:active {
   background-image: url(../../../images/Heart_active_black.svg);
   background-color: transparent;
-}
+}*/
