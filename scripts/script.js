@@ -34,7 +34,7 @@ function submitForm(event) {
 
 
 
-// Загрузка 6 карточек при октрытии страницы
+// ПР5 Загрузка 6 карточек при октрытии страницы
 
 const initialCards = [
   {
@@ -79,12 +79,16 @@ initialCards.forEach((item) => {
 
 
 
-  // ПР5 Попап Новое место
 
-const addPopup = document.querySelector('.popup__type_add');  // выбираем элемент с классом "popup__type_add"
-const addPopupCloseButton = addPopup.querySelector('.popup__close-btn');  // выбираем кнопку закрытия окна
-const addButton = document.querySelector('.profile__add-btn');  // выбираем кнопку открытия окна
-const addPopupForm = document.querySelector('.popup__form_add');  // выбираем форму
+
+  // ПР5 Попап Новое место и Добавление новой фотографии  ПЕРЕПИСАТЬ КОД К ЧЕРТОВОЙ МАТЕРИ
+
+  /*
+
+const addPopup = document.querySelector('.popup__type_add');
+const addPopupCloseButton = addPopup.querySelector('.popup__close-btn');  // кнопка закрытия окна
+const addButton = document.querySelector('.profile__add-btn');  // кнопка открытия окна
+const addPopupForm = document.querySelector('.popup__form_add');
 
 function openAddPopup() {
   addPopup.classList.add('popup_opened');  // добавляем класс для открытия окна
@@ -94,21 +98,68 @@ function closeAddPopup() {
   addPopup.classList.remove('popup_opened');  // удаляем класс для закрытия окна
 }
 
-addButton.addEventListener('click', openAddPopup);  // назначаем обработчик события клика на кнопку открытия окна
-addPopupCloseButton.addEventListener('click', closeAddPopup);  // назначаем обработчик события клика на кнопку закрытия окна
-addPopupForm.addEventListener('submit', submitAddForm);  // назначаем обработчик события отправки формы
+
+addButton.addEventListener('click', openAddPopup);  // открытие окна Новое место
+addPopupCloseButton.addEventListener('click', closeAddPopup);  // закрытие окна Новое место
+addPopupForm.addEventListener('submit', submitAddForm);  // обработчик события отправки формы
+
 
 function submitAddForm(event) {
-  event.preventDefault();  // отменяем стандартное поведение формы
-  const newPlaceName = addPopupForm.elements.name.value;  // получаем значение поля "Место"
-  const newPlaceLink = addPopupForm.elements.prof.value;  // получаем значение поля "Ссылка на картинку"
+  event.preventDefault();  // отменяем стандартное поведение отправки формы
 
-  const newCard = createCard(newPlaceName, newPlaceLink);  // создаем новую карточку с помощью функции createCard
-  const placesList = document.querySelector('.places-list');  // выбираем контейнер для карточек
-  placesList.prepend(newCard);  // добавляем новую карточку в начало контейнера
-  addPopupForm.reset();  // очищаем поля формы
-  closeAddPopup();  // закрываем окно
+  const placeInput = addPopup.querySelector('.popup__input_type_place');
+  const linkInput = addPopup.querySelector('.popup__input_type_link');
+
+  const placeValue = placeInput.value;
+  const linkValue = linkInput.value;
+
+  const card = createCard(placeValue, linkValue);
+  const elements = document.querySelector('.elements');
+  elements.appendChild(card);
+
+  closeAddPopup();
+  addPopupForm.reset();
 }
+
+
+function createCard(placeValue, linkValue) {
+  // Создаем элементы карточки
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  const image = document.createElement('img');
+  image.classList.add('card__image');
+  image.src = linkValue;
+  image.alt = placeValue;
+
+  const title = document.createElement('h2');
+  title.classList.add('card__title');
+  title.textContent = placeValue;
+
+  const likeButton = document.createElement('button');
+  likeButton.classList.add('card__like-button');
+
+  // Добавляем элементы карточки на страницу
+  card.appendChild(image);
+  card.appendChild(title);
+  card.appendChild(likeButton);
+
+  return card;
+
+  function prependCard(placeValue, linkValue) {
+    const card = createCard(placeValue, linkValue);
+    const element = document.querySelector('.element');  // card-list
+    cardList.prepend(card);
+  }
+}
+
+  // ПР5 Попап Новое место и Добавление новой фотографии  ПЕРЕПИСАТЬ КОД К ЧЕРТОВОЙ МАТЕРИ
+  */
+
+
+
+
+
 
 
 
@@ -117,6 +168,7 @@ function submitAddForm(event) {
   const popupImage = document.querySelector('.popup_image');
   const imageFull = popupImage.querySelector('.popup__image-full');
   const titleFull = popupImage.querySelector('.popup__image-title');
+  const popupCloseButton = popupImage.querySelector('.popup__close-btn');   // закрытие из широокого окна
 
   function openImage() {
     const imageSrc = this.src;
@@ -128,7 +180,10 @@ function submitAddForm(event) {
 
     popupImage.classList.add('popup_opened');
 
+  }
 
+  function closeImage() {                          // закрытие из широкого окна
+    popupImage.classList.remove('popup_opened');
   }
 
   const images = document.querySelectorAll('img');
@@ -136,6 +191,8 @@ function submitAddForm(event) {
     image.addEventListener('click', openImage);
 
   });
+
+  popupCloseButton.addEventListener('click', closeImage);  // закрытие из широкого окна
 
 
 
@@ -156,7 +213,8 @@ function submitAddForm(event) {
 });
 
 
- const elements = document.querySelectorAll('.element__like');    // Реализация лайков
+// Реализация лайков
+ const elements = document.querySelectorAll('.element__like');
 
 elements.forEach((element) => {
   element.addEventListener('click', () => {
