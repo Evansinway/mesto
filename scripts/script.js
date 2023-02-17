@@ -171,7 +171,4 @@ formAdd.addEventListener('submit', submitAddForm);  // обработчик со
 
 preload();
 
-//PISHU
-///ERROR FOR PROVERKA SVYAZY НИЖЕ СТРОКУ УДАЛИТЬ
 
-formAdd.addEventListener('submit', submitAddForm);
