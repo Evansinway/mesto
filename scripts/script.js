@@ -170,3 +170,8 @@ formAdd.addEventListener('submit', submitAddForm);  // обработчик со
 // Вызываем функцию, которая прогружает первые 6 карточек на страницу
 
 preload();
+
+//PISHU
+///ERROR FOR PROVERKA SVYAZY НИЖЕ СТРОКУ УДАЛИТЬ
+
+formAdd.addEventListener('submit', submitAddForm);
