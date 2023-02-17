@@ -37,11 +37,11 @@ editButton.addEventListener('click', () => {
 
 const closeButtons = document.querySelectorAll('.popup__close-btn');
 
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const popupOpened = document.querySelector('.popup_opened');
-    closePopup(popupOpened);
-  });
+closeButtons.forEach((button) => {
+  // находим 1 раз ближайший к крестику попап
+  const popup = button.closest('.popup');
+  // устанавливаем обработчик закрытия на крестик
+  button.addEventListener('click', () => closePopup(popup));
 });
 
 
