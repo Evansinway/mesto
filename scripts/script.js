@@ -31,6 +31,8 @@ function closePopup(popup) {
 
 
 editButton.addEventListener('click', () => {
+  nameInput.value = profileName.textContent;
+  profInput.value = profileProf.textContent;
   openPopup(popupEdit);
 });   //ПР4
 
@@ -91,6 +93,8 @@ const initialCards = [
   const cardTitle = cardElements.querySelector('.element__title');
   const cardLikeButton = cardElements.querySelector('.element__like');
   const cardDeleteButton = cardElements.querySelector('.element__delete');
+  const popupPicture = popupImage.querySelector('.popup__image-full');   // изображение с попапа увеличенного изображения
+  const imageCaption = popupImage.querySelector('.popup__image-title');  // название карточки под увеличенным изображением
 
   cardTitle.textContent = name;  // название карточки через .textContent
   cardImage.src = link;   // ссылка и альт текст изображения
@@ -107,15 +111,11 @@ const initialCards = [
     cardElements.remove();
   });
 
-   cardImage.addEventListener('click', () => {     // открытие попап фото в широком окне
+  cardImage.addEventListener('click', () => {     // открытие попап фото в широком окне
 
-   const cardImage = popupImage.querySelector('.popup__image-full');   // изображение с попапа увеличенного изображения
-   const cardTitle = popupImage.querySelector('.popup__image-title');  // название карточки под увеличенным изображением
-
-
-    cardTitle.textContent = name;  // название карточки через .textContent
-    cardImage.src = link;   // ссылка и альт текст изображения
-    cardImage.alt = name;
+    imageCaption.textContent = name;  // название карточки через .textContent
+    popupPicture.src = link;   // ссылка и альт текст изображения
+    popupPicture.alt = name;
 
     openPopup(popupImage);   // попап с увеличенным изображением
 
@@ -135,7 +135,7 @@ function submitAddForm(event) {
   cardList.prepend(createCard(placeInput.value, linkInput.value));
 
   closePopup(addPopupForm);
-  evt.target.reset();
+   event.target.reset();
 }
 
 
