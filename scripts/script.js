@@ -19,12 +19,12 @@ const placeInput = addPopup.querySelector('.popup__input_type_place');
 const linkInput = addPopup.querySelector('.popup__input_type_link');
 
 
-function openPopup(popup) {     // функция для открытия всех popup - сюда прописать еще оверлей и эскейп
+function openPopup(popup) {     // функция для открытия всех popup
   popup.classList.add('popup_opened')  //ПР4
-  document.addEventListener('keydown', closePopupEscape);   // добавлено для закрытия по esc из ПР6 !!!
+  document.addEventListener('keydown', closePopupEscape);   // закрытие попапов по Esc
 }
 
-function closePopup(popup) {    // функция для закрытия всех popup - сюда прописать еще оверлей и эскейп
+function closePopup(popup) {    // функция для закрытия всех popup
   popup.classList.remove('popup_opened')   //ПР4
   document.removeEventListener('keydown', closePopupEscape);   // закрытие попапов по Esc
 }
@@ -42,7 +42,7 @@ closePopupOverlay.forEach(popup => {
 
 
 
-function closePopupEscape(evt) {   // // закрытие попапов по Esc
+function closePopupEscape(evt) {   //  закрытие попапов по Esc
   if (evt.key === "Escape") {
     const popupOpened = document.querySelector('.popup_opened');
     closePopup(popupOpened);

@@ -79,7 +79,7 @@ function setEventListeners(formElement, config) {      // получение и�
   inputList.forEach((inputElement) => {   // проходим инпуты
     inputElement.addEventListener('input', () => {          // проверка инпутов на валидные данные с помощью обработчика
       checkInputValidity(formElement, inputElement, config);
-      toggleButtonState(inputList, config);   // список инпутов, которые проверяются на валидность
+      toggleButtonState(inputList, buttonElement, config);   // список инпутов, которые проверяются на валидность
     })
   })
 };
