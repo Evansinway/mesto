@@ -13,6 +13,7 @@
   </header>
 
   <main class="main">
+
     <section class="profile">
       <div class="profile__info">
         <img src="./images/0_JYKusto.jpg" class="profile__avatar" alt="Аватар">
@@ -96,12 +97,13 @@
       <div class="popup__container">
         <button class="popup__close-btn" type="button" aria-label="Закрыть редактирование"></button>
           <h3 class="popup__title">Редактировать профиль</h3>
-
-          <form class="popup__form popup__form_edit" name="popupForm">
-
-            <input type="text" class="popup__input popup__input_type_name" name="name" placeholder="Жак-Ив Кусто">
-            <input type="text" class="popup__input popup__input_type_prof" name="prof" placeholder="Исследователь океана">
-            <button type="submit" class="popup__btn">Сохранить</button>
+          <form class="popup__form popup__form_edit" name="popupForm" novalidate>
+            <input type="text" class="popup__input popup__input_type_name" id="username" name="username" minlength="2" maxlength="40"  placeholder="Жак-Ив Кусто" required>
+            <span class="popup__input-error username-error"></span>
+            <input type="text" class="popup__input popup__input_type_prof" id="userprof" name="userprof" minlength="2"
+            maxlength="200" placeholder="Исследователь океана" required>
+            <span class="popup__input-error userprof-error"></span>
+            <button type="submit" class="popup__btn popup__btn_inactive">Сохранить</button>
           </form>
       </div>
     </div>
@@ -110,11 +112,11 @@
       <div class="popup__container">
         <button class="popup__close-btn" type="button" aria-label="Закрыть редактирование"></button>
           <h3 class="popup__title">Новое место</h3>
-
-          <form class="popup__form popup__form_add" name="popupAdd">
-
-            <input type="text" class="popup__input popup__input_type_place" name="name" placeholder="Место">
-            <input type="text" class="popup__input popup__input_type_link" name="prof" placeholder="Ссылка на картинку">
+          <form class="popup__form popup__form_add" name="popupAdd" novalidate>
+            <input type="text" class="popup__input popup__input_type_place" id="cardplace" name="cardplace" minlength="2" maxlength="30" placeholder="Место" required>
+            <span class="popup__input-error cardplace-error"></span>
+            <input type="url" class="popup__input popup__input_type_link" id="cardlink" name="cardlink" placeholder="Ссылка на картинку">
+            <span class="popup__input-error cardlink-error"></span>
             <button type="submit" class="popup__btn">Создать</button>
           </form>
       </div>
@@ -142,7 +144,9 @@
  </template>
 
 
+ <script src="./scripts/validate.js"></script>
  <script src="./scripts/script.js"></script>
+
 
 </body>
 </html>

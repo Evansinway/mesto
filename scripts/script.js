@@ -19,14 +19,35 @@ const placeInput = addPopup.querySelector('.popup__input_type_place');
 const linkInput = addPopup.querySelector('.popup__input_type_link');
 
 
-function openPopup(popup) {
+function openPopup(popup) {     // функция для открытия всех popup - сюда прописать еще оверлей и эскейп
   popup.classList.add('popup_opened')  //ПР4
-
+  document.addEventListener('keydown', closePopupEscape);   // добавлено для закрытия по esc из ПР6 !!!
 }
 
-function closePopup(popup) {
+function closePopup(popup) {    // функция для закрытия всех popup - сюда прописать еще оверлей и эскейп
   popup.classList.remove('popup_opened')   //ПР4
+  document.removeEventListener('keydown', closePopupEscape);   // закрытие попапов по Esc
 }
+
+
+
+const closePopupOverlay = Array.from(document.querySelectorAll('.popup'));   // закрытие попапов по Overlay
+
+closePopupOverlay.forEach(popup => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.currentTarget === evt.target)
+    closePopup(popup);
+  });
+});
+
+
+
+function closePopupEscape(evt) {   // // закрытие попапов по Esc
+  if (evt.key === "Escape") {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  };
+};
 
 
 
@@ -56,6 +77,7 @@ function editSubmitForm(event) {
 
   closePopup(popupEdit);
 }
+
 
 
 // ПР5 Загрузка 6 карточек при открытии страницы
@@ -151,5 +173,7 @@ formAdd.addEventListener('submit', submitAddForm);  // обработчик со
 // Вызываем функцию, которая прогружает первые 6 карточек на страницу
 
 preload();
+
+
 
 
