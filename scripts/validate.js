@@ -26,7 +26,7 @@ function handleSubmit(evt) {
 
 form.addEventListener('submit', handleSubmit); */
 
-enableValidation(validationConfig);
+// enableValidation(validationConfig);
 
 
 function showInputError(formElement, inputElement, config) {
@@ -93,5 +93,5 @@ function enableValidation(config) {   // прохождение по всем ф
   })
 };
 
-
+enableValidation(validationConfig);
 

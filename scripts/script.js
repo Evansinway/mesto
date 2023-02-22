@@ -31,9 +31,9 @@ function closePopup(popup) {    // функция для закрытия все
 
 
 
-const closePopupOverlay = Array.from(document.querySelectorAll('.popup'));   // закрытие попапов по Overlay
+const popupList = Array.from(document.querySelectorAll('.popup'));   // закрытие попапов по Overlay
 
-closePopupOverlay.forEach(popup => {
+popupList.forEach(popup => {
   popup.addEventListener('click', (evt) => {
     if (evt.currentTarget === evt.target)
     closePopup(popup);
@@ -55,6 +55,7 @@ editButton.addEventListener('click', () => {
   nameInput.value = profileName.textContent;
   profInput.value = profileProf.textContent;
   openPopup(popupEdit);
+  resetValidation(popupEditForm, validationConfig);
 });   //ПР4
 
 
@@ -163,6 +164,7 @@ function submitAddForm(event) {
 
 addButton.addEventListener('click', () => {
   openPopup(addPopupForm);
+  resetValidation(formAdd, validationConfig);
 });  // открытие окна Новое место
 
 
